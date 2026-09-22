@@ -2,6 +2,8 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { HiOutlineX } from "react-icons/hi";
+import { HiBars3 } from "react-icons/hi2";
 
 export default function Navbar() {
   const isAbovemediaScreens = useMediaQuery("(min-width: 1060px)");
@@ -63,7 +65,6 @@ export default function Navbar() {
         >
           Brayan
         </Link>
-
         {/* Desktop view */}
         <div className="hidden md:flex items-center gap-1">
           <div className="gap-1 items-center rounded-full flex px-4 py-1 bg-background">
@@ -71,10 +72,10 @@ export default function Navbar() {
               <button
                 key={navItem.id}
                 onClick={() => handleClick(navItem.id)}
-                className={`relative transition-all duration-300 rounded-full px-4 py-2 ${
+                className={`relative transition-all rounded-full duration-700  px-4 py-2 ${
                   activeSection === navItem.id
                     ? "text-accent font-bold"
-                    : "text-grey hover:text-secondary"
+                    : "text-grey hover:text-secondary  bg-accentBackground"
                 }`}
               >
                 {navItem.label}
@@ -85,7 +86,39 @@ export default function Navbar() {
             ))}
           </div>
         </div>
+
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setIsMenuToggled(!isMenuToggled)}
+          className="md:hidden p-2 cursor-pointer text-grey"
+        >
+          {isMenuToggled ? <HiOutlineX size={24} /> : <HiBars3 size={24} />}
+        </button>
       </nav>
+
+      {/* Mobile view */}
+      {isMenuToggled && (
+        <div className="md:hidden animate-fade-in bg-accentBackground">
+          <div className="mx-auto flex flex-col gap-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  handleClick(item.id);
+                  setIsMenuToggled(false);
+                }}
+                className={`w-full text-center py-3 px-3 rounded-lg transition-all duration-300 ${
+                  activeSection === item.id
+                    ? "text-accent border-background/50 font-bold border-b-2 "
+                    : "text-grey hover:text-primary hover:border-background hover:border-b-2"
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
