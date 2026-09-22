@@ -1,4 +1,6 @@
+"use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -48,5 +50,42 @@ export default function Navbar() {
       });
     }
   };
-  return <div>Navbar</div>;
+  return (
+    <div
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "py-3" : "py-5"
+      } bg-accentBackground`}
+    >
+      <nav className="mx-auto flex items-center justify-between px-6 container">
+        <Link
+          href="/"
+          className="text-xl tracking-tight hover:text-secondary text-accent"
+        >
+          Brayan
+        </Link>
+
+        {/* Desktop view */}
+        <div className="hidden md:flex items-center gap-1">
+          <div className="gap-1 items-center rounded-full flex px-4 py-1 bg-background">
+            {navItems.map((navItem) => (
+              <button
+                key={navItem.id}
+                onClick={() => handleClick(navItem.id)}
+                className={`relative transition-all duration-300 rounded-full px-4 py-2 ${
+                  activeSection === navItem.id
+                    ? "text-accent font-bold"
+                    : "text-grey hover:text-secondary"
+                }`}
+              >
+                {navItem.label}
+                {activeSection === navItem.id && (
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-full" />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
 }
