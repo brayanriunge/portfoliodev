@@ -1,12 +1,11 @@
 "use client";
-import useMediaQuery from "@/hooks/useMediaQuery";
+
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import { HiBars3 } from "react-icons/hi2";
 
 export default function Navbar() {
-  const isAbovemediaScreens = useMediaQuery("(min-width: 1060px)");
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -55,8 +54,8 @@ export default function Navbar() {
   return (
     <div
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "py-3" : "py-5"
-      } bg-accentBackground`}
+        isScrolled ? "py-3 bg-transparent" : "py-5 bg-accentBackground"
+      } `}
     >
       <nav className="mx-auto flex items-center justify-between px-6 container">
         <Link
