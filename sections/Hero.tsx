@@ -20,7 +20,7 @@ export default function Hero() {
                 reliable software.
               </span>
             </h1>
-            <p className="text-lg text-secondaryText  animate-fade-in transition-all duration-300 transiton-delay-200">
+            <p className="text-lg text-secondaryText max-w-lg animate-fade-in transition-all duration-300 transiton-delay-200">
               Hi, I&apos;m Brian Mutahi — a software engineer specializing in
               React, Next.js, JavaScript and TypeScript. I build scalable,
               performant web applications that users love.
@@ -28,7 +28,10 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto mt-4">
+        <div
+          className="mx-auto mt-4 animate-slide-in-left  
+         "
+        >
           <CodeBlockDemo />
         </div>
       </div>

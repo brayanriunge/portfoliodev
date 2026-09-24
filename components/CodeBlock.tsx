@@ -22,7 +22,7 @@ export function CodeBlockDemo() {
 `;
 
   return (
-    <div className="max-w-3xl mx-auto w-full">
+    <div className="max-w-3xl mx-auto w-full animate-fade-in transition-all duration-500">
       <CodeBlock language="jsx" filename="Developer.tsx" code={code} />
     </div>
   );
