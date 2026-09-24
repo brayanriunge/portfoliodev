@@ -23,7 +23,7 @@
     }
   }
 
-  @keyframes slide-in-left {
+  @keyframes slide-in-right {
     from {
       opacity: 0;
       transform: translateX(50px);
@@ -36,8 +36,25 @@
     }
   }
 
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+      filter: blur(3px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
+  }
+
   .animate-fade-in {
     animation: fade-in 0.8s ease-out both;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 1s ease-out both;
   }
 
   .animate-slide-in-left {

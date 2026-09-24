@@ -71,7 +71,7 @@ export default function Navbar() {
               <button
                 key={navItem.id}
                 onClick={() => handleClick(navItem.id)}
-                className={`relative transition-all rounded-full duration-700  px-4 py-2 ${
+                className={`relative transition-all rounded-full duration-700 cursor-pointer px-4 py-2 ${
                   activeSection === navItem.id
                     ? "text-accent font-bold"
                     : "text-grey hover:text-secondary  bg-accentBackground"
@@ -106,7 +106,7 @@ export default function Navbar() {
                   handleClick(item.id);
                   setIsMenuToggled(false);
                 }}
-                className={`w-full text-center py-3 px-3 rounded-lg transition-all duration-300 ${
+                className={`w-full text-center py-3 px-3 rounded-lg cursor-pointer transition-all duration-300 ${
                   activeSection === item.id
                     ? "text-accent border-background/50 font-bold border-b-2 "
                     : "text-grey hover:text-primary hover:border-background hover:border-b-2"

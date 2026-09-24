@@ -1,5 +1,7 @@
 import { CodeBlockDemo } from "@/components/CodeBlock";
+import Link from "next/link";
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -25,11 +27,17 @@ export default function Hero() {
               React, Next.js, JavaScript and TypeScript. I build scalable,
               performant web applications that users love.
             </p>
+            <button className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey transition-all duration-300 mt-4 animate-slide-in-left ">
+              <div className="flex gap-4 items-center ">
+                <Link href={"#contact"}>Contact Me</Link>{" "}
+                <FaArrowRight size={20} />
+              </div>
+            </button>
           </div>
         </div>
 
         <div
-          className="mx-auto mt-4 animate-slide-in-left  
+          className="mx-auto mt-4 animate-slide-in-right  
          "
         >
           <CodeBlockDemo />
