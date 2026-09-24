@@ -1,10 +1,11 @@
+import { CodeBlockDemo } from "@/components/CodeBlock";
 import React from "react";
 
 export default function Hero() {
   return (
     <section id="home" className="px-8 py-28 bg-background">
-      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-2 mx-auto">
-        <div className="flex flex-col  justify-between">
+      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-4 mx-auto">
+        <div className="flex flex-col justify-between">
           <p className="text-accent px-4 font-[sora] italic">
             Software Engineering
           </p>
@@ -27,7 +28,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div></div>
+        <div className="mx-auto mt-4">
+          <CodeBlockDemo />
+        </div>
       </div>
     </section>
   );
