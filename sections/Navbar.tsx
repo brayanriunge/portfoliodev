@@ -60,9 +60,9 @@ export default function Navbar() {
       <nav className="mx-auto flex items-center justify-between px-6 container">
         <Link
           href="/"
-          className="text-xl tracking-tight hover:text-secondary text-accent"
+          className="text-2xl tracking-tight hover:text-secondary text-accent"
         >
-          Brayan
+          &lt; &gt; Brayan
         </Link>
         {/* Desktop view */}
         <div className="hidden md:flex items-center gap-1">
