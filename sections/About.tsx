@@ -1,5 +1,44 @@
+import Image from "next/image";
 import React from "react";
 
 export default function About() {
-  return <div>about</div>;
+  return (
+    <section id="about" className="px-8 py-8 bg-accentBackground">
+      <div className="flex flex-col md:flex-row lg-flex-row items-center justify-center gap-6">
+        <div className="flex space-y-4 flex-col text-grey text-lg  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
+          <div className="space-y-4 flex ">
+            <p className="text-accent px-4 font-[sora] italic">About Me</p>
+          </div>
+          <div className="text-secondaryText">
+            <p className="">
+              I&apos;m a passionate software engineer with experience in
+              crafting digital products that make a difference. My journey
+              started with a curiosity for how things work on the web, and it
+              has evolved into a deep expertise in modern frontend technologies.
+            </p>
+            <p className="py-4">
+              I specialize in React, Next.js, and TypeScript, building
+              everything from sleek landing pages to complex enterprise
+              applications. My approach combines technical excellence with a
+              keen eye for design and user experience.
+            </p>
+            <p className="py-4">
+              When I&apos;m not coding, you&apos;ll find me exploring new
+              technologies, contributing to open-source projects, or sharing
+              knowledge with the developer community.
+            </p>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <Image
+            src={"/profile.avif"}
+            height={600}
+            width={600}
+            alt="profile"
+            className="rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+  );
 }
