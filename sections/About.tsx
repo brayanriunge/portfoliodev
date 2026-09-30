@@ -16,8 +16,8 @@ export default function About() {
           </span>
         </p>
       </h2>
-      <div className="flex flex-col md:flex-row lg-flex-row items-center justify-center gap-6 px-2">
-        <div className="flex space-y-4 flex-col md:flex-col lg:flex-row text-grey text-lg  max-w-md animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
+      <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 mx-auto ">
+        <div className="flex space-y-4 flex-row md:flex-col lg:flex-col  text-grey text-lg  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
           <div className="text-secondaryText">
             <p className="">
               I&apos;m a passionate software engineer with experience in
@@ -38,7 +38,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="space-y-4 w-full">
+        <div className="space-y-4 w-full items-center flex">
           <Image
             src={"/profile.avif"}
             height={600}
