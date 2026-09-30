@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 export default function Hero() {
   return (
     <section id="home" className="px-8 py-28 bg-background">
-      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-4 mx-auto">
+      <div className="flex flex-col md:flex-col lg:flex-row items-center justify-between px-2 gap-4 mx-auto">
         <div className="flex flex-col justify-between">
           <p className="text-accent px-4 font-[sora] italic">
             Software Engineering

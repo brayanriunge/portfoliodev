@@ -4,11 +4,20 @@ import React from "react";
 export default function About() {
   return (
     <section id="about" className="px-8 py-8 bg-accentBackground">
-      <div className="flex flex-col md:flex-row lg-flex-row items-center justify-center gap-6">
-        <div className="flex space-y-4 flex-col text-grey text-lg  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
-          <div className="space-y-4 flex ">
-            <p className="text-accent px-4 font-[sora] italic">About Me</p>
-          </div>
+      <div className="space-y-4 flex px-2 ">
+        <p className="text-accent px-4 font-[sora] italic">About Me</p>
+      </div>
+      <h2 className="text-4xl md:text-5xl lg:text-6xl animate-fade-in transition-all duration-300 transition-delay-100 font-bold leading-tight text-grey px-2">
+        <p>
+          {" "}
+          Building the future,
+          <span className="text-accent font-[sora]">
+            one component at a time.
+          </span>
+        </p>
+      </h2>
+      <div className="flex flex-col md:flex-row lg-flex-row items-center justify-center gap-6 px-2">
+        <div className="flex space-y-4 flex-col md:flex-col lg:flex-row text-grey text-lg  max-w-md animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
           <div className="text-secondaryText">
             <p className="">
               I&apos;m a passionate software engineer with experience in
@@ -29,13 +38,13 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 w-full">
           <Image
             src={"/profile.avif"}
             height={600}
             width={600}
             alt="profile"
-            className="rounded-lg"
+            className="rounded-lg "
           />
         </div>
       </div>
