@@ -24,6 +24,7 @@ export default function About() {
               crafting digital products that make a difference. My journey
               started with a curiosity for how things work on the web, and it
               has evolved into a deep expertise in modern frontend technologies.
+              add
             </p>
             <p className="py-4">
               I specialize in React, Next.js, and TypeScript, building
