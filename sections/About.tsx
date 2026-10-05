@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section id="about" className="px-8 py-8 bg-accentBackground">
+    <section id="about" className="px-8 py-8 bg-primary">
       <div className="space-y-4 flex px-2 ">
         <p className="text-accent px-4 font-[sora] italic">About Me</p>
       </div>
@@ -39,7 +39,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="space-y-4 w-full items-center flex">
+        <div className="space-y-4 w-full items-center justify-center flex">
           <Image
             src={"/profile.avif"}
             height={600}
