@@ -16,7 +16,7 @@ export default function About() {
           </span>
         </p>
       </h2>
-      <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 mx-auto ">
+      <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 mx-auto px-6">
         <div className="flex space-y-4 flex-row md:flex-col lg:flex-col  text-grey text-lg  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
           <div className="text-secondaryText">
             <p className="">
@@ -45,7 +45,7 @@ export default function About() {
             height={600}
             width={600}
             alt="profile"
-            className="rounded-lg "
+            className="rounded-lg h-auto w-auto  "
           />
         </div>
       </div>
