@@ -9,6 +9,7 @@
   --color-accent: #4ade80;
   --color-secondaryText: #94a3b8;
   --color-grey: #f0fdf4;
+  --color-forecolor: #0f3528;
 }
 
 @layer utilities {
