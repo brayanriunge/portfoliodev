@@ -42,13 +42,13 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="space-y-4 w-full items-center justify-center flex">
+          <div className="space-y-4 w-full items-center justify-center flex ">
             <Image
               src={"/profile.avif"}
               height={600}
               width={600}
               alt="profile"
-              className="rounded-lg h-auto w-auto  "
+              className="rounded-lg aspect-3/2 w-full "
             />
           </div>
         </div>
