@@ -1,6 +1,25 @@
 import { GlareCard } from "@/components/ui/glare-card";
 
-const services = [{}];
+const services = [
+  {
+    id: 1,
+    heading: "Frontend Development",
+    description:
+      "Turning designs into responsive, accessible interfaces with React, Next.js, and TypeScript — from UI/UX and layout decisions to smooth, high-performance experiences across desktop, tablet, and mobile.",
+  },
+  {
+    id: 2,
+    heading: "Backend Development",
+    description:
+      "Designing and building APIs, auth, and data layers with NestJS and Go, backed by PostgreSQL — handling everything from payments and permissions to audit trails and business logic.",
+  },
+  {
+    id: 3,
+    heading: "Fullstack Development",
+    description:
+      "Owning a product end to end — frontend, backend, database, and deployment — to ship complete, reliable platforms for fintech, government, ed-tech, and real-estate clients.",
+  },
+];
 
 export function Services() {
   return (
@@ -9,25 +28,18 @@ export function Services() {
         <p className="text-accent px-4 font-[sora] italic">Services</p>
       </div>
       <div className="flex flex-col md:flex-row lg:flex-row items-center justify-center gap-6">
-        <GlareCard className="flex flex-col items-center justify-center">
-          <svg
-            width="66"
-            height="65"
-            viewBox="0 0 66 65"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7 text-white"
+        {services.map((service) => (
+          <GlareCard
+            className="flex flex-col items-center justify-center p-6 bg-card"
+            key={service.id}
           >
-            <path
-              d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-              stroke="currentColor"
-              strokeWidth="15"
-              strokeMiterlimit="3.86874"
-              strokeLinecap="round"
-            />
-          </svg>
-          <p className="text-white font-bold text-xl mt-4">Aceternity</p>
-        </GlareCard>
+            <h1 className="text-3xl text-grey ">{service.heading}</h1>
+            <p className="text-lg text-secondarytext mt-4">
+              {service.description}
+            </p>
+            <p className="text-white font-bold text-xl mt-4">Aceternity</p>
+          </GlareCard>
+        ))}
       </div>
     </section>
   );
