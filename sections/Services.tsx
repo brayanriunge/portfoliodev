@@ -44,10 +44,10 @@ export function Services() {
               {service.description}
             </p>
             <div className="flex flex-row items-start gap-4">
-              <Link href={service.github}>
+              <Link href="https://github.com/brayanriunge">
                 <AiFillGithub size={30} />
               </Link>
-              <Link href={service.linkedIn}>
+              <Link href="https://www.linkedin.com/in/riunge-brian/">
                 <FaLinkedin size={30} color="#4ade80" />
               </Link>
             </div>
