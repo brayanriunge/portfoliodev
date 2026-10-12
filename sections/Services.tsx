@@ -1,5 +1,4 @@
 import { GlareCard } from "@/components/ui/glare-card";
-import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -32,9 +31,23 @@ const services = [
 
 export function Services() {
   return (
-    <section className="bg-background px-8 py-8">
-      <div className="space-y-4 flex px-2 ">
+    <section className="bg-background  px-8 py-8" id="services">
+      <div className="space-y-4 flex mt-10 px-2 ">
         <p className="text-accent px-4 font-[sora] italic">Services</p>
+      </div>
+      <div className="space-y-4  ">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-accent font-[sora]">
+          What I Build
+        </h2>
+        <p className=" px-4 text-grey text-xl">
+          I turn complex business problems into scalable, clean, and efficient
+          software applications. From designing robust system architectures to
+          launching responsive user interfaces, I engineer digital products with
+          modern tech stacks that focus on high performance, reliable uptime,
+          and intuitive user experiences. Whether you need a minimum viable
+          product (MVP) built from scratch or system performance optimized, I
+          write code that drives business results.
+        </p>
       </div>
       <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center px-8 py-8 gap-6">
         {services.map((service) => (
@@ -44,12 +57,18 @@ export function Services() {
               {service.description}
             </p>
             <div className="flex flex-row items-start gap-4">
-              <Link href="https://github.com/brayanriunge">
+              <a
+                href="https://github.com/brayanriunge"
+                className="cursor-pointer"
+              >
                 <AiFillGithub size={30} />
-              </Link>
-              <Link href="https://www.linkedin.com/in/riunge-brian/">
+              </a>
+              <a
+                href="https://www.linkedin.com/in/riunge-brian/"
+                className="cursor-pointer"
+              >
                 <FaLinkedin size={30} color="#4ade80" />
-              </Link>
+              </a>
             </div>
           </GlareCard>
         ))}

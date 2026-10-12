@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <section id="about" className="px-8 py-8 bg-primary">
-        <div className="space-y-4 flex px-2 ">
+        <div className="space-y-4 flex px-2 mt-10">
           <p className="text-accent px-4 font-[sora] italic">About Me</p>
         </div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl animate-fade-in transition-all duration-300 transition-delay-100 font-bold leading-tight text-grey px-2">
@@ -20,7 +20,7 @@ export default function About() {
           </p>
         </h2>
         <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-6 mx-auto px-6">
-          <div className="flex space-y-4 flex-row md:flex-col lg:flex-col  text-grey text-lg  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
+          <div className="flex space-y-4 flex-row md:flex-col lg:flex-col  text-grey text-xl  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
             <div className="text-secondaryText">
               <p className="">
                 I&apos;m a passionate software engineer with experience in
