@@ -28,7 +28,7 @@ export default function Hero() {
               performant web applications that users love.
             </p>
             <Link href={"#contact"}>
-              <button className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey transition-all duration-300 mt-4 animate-slide-in-left ">
+              <button className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey transition-all duration-300 mt-4 animate-slide-in-left cursor-pointer">
                 <div className="flex gap-4 items-center ">
                   Contact Me <FaArrowRightLong size={20} />
                 </div>

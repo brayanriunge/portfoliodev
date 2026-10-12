@@ -1,4 +1,5 @@
 import { GlareCard } from "@/components/ui/glare-card";
+import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -56,19 +57,30 @@ export function Services() {
             <p className="text-lg text-secondarytext mt-10 mb-8">
               {service.description}
             </p>
-            <div className="flex flex-row items-start gap-4">
-              <a
+            <div className="flex flex-row items-center gap-4">
+              <Link
                 href="https://github.com/brayanriunge"
-                className="cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer hover:opacity-80 transition-opacity"
+                aria-label="GitHub Profile"
               >
-                <AiFillGithub size={30} />
-              </a>
-              <a
+                <button>
+                  <AiFillGithub size={30} color="#ffffff" />
+                </button>
+              </Link>
+
+              <Link
                 href="https://www.linkedin.com/in/riunge-brian/"
-                className="cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer hover:opacity-80 transition-opacity"
+                aria-label="LinkedIn Profile"
               >
-                <FaLinkedin size={30} color="#4ade80" />
-              </a>
+                <button>
+                  <FaLinkedin size={30} color="#ffffff" />
+                </button>
+              </Link>
             </div>
           </GlareCard>
         ))}
