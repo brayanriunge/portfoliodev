@@ -1,3 +1,4 @@
+"use client";
 import { GlareCard } from "@/components/ui/glare-card";
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
@@ -33,7 +34,7 @@ const services = [
 export function Services() {
   return (
     <section className="bg-background  px-8 py-8" id="services">
-      <div className="space-y-4 flex mt-10 px-2 ">
+      <div className="space-y-4 flex mt-10 px-2 mb-4">
         <p className="text-accent px-4 font-[sora] italic">Services</p>
       </div>
       <div className="space-y-4  ">
@@ -57,30 +58,27 @@ export function Services() {
             <p className="text-lg text-secondarytext mt-10 mb-8">
               {service.description}
             </p>
-            <div className="flex flex-row items-center gap-4">
-              <Link
-                href="https://github.com/brayanriunge"
+            <div className="flex relative z-10 flex-row items-center gap-4">
+              <a
+                href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer hover:opacity-80 transition-opacity"
                 aria-label="GitHub Profile"
+                onClick={(e) => e.stopPropagation()}
               >
-                <button>
-                  <AiFillGithub size={30} color="#ffffff" />
-                </button>
-              </Link>
-
-              <Link
-                href="https://www.linkedin.com/in/riunge-brian/"
+                <AiFillGithub size={30} color="#ffffff" />
+              </a>
+              <a
+                href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer hover:opacity-80 transition-opacity"
                 aria-label="LinkedIn Profile"
+                onClick={(e) => e.stopPropagation()}
               >
-                <button>
-                  <FaLinkedin size={30} color="#ffffff" />
-                </button>
-              </Link>
+                <FaLinkedin size={30} color="#ffffff" />
+              </a>
             </div>
           </GlareCard>
         ))}
