@@ -58,24 +58,22 @@ export function Services() {
             <p className="text-lg text-secondarytext mt-10 mb-8">
               {service.description}
             </p>
-            <div className="flex relative z-10 flex-row items-center gap-4">
+            <div className="flex relative z-30 pointer-events-auto flex-row items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/brayanriunge"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer hover:opacity-80 transition-opacity"
                 aria-label="GitHub Profile"
-                onClick={(e) => e.stopPropagation()}
               >
                 <AiFillGithub size={30} color="#ffffff" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/riunge-brian/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer hover:opacity-80 transition-opacity"
                 aria-label="LinkedIn Profile"
-                onClick={(e) => e.stopPropagation()}
               >
                 <FaLinkedin size={30} color="#ffffff" />
               </a>
