@@ -1,6 +1,5 @@
 "use client";
 import { GlareCard } from "@/components/ui/glare-card";
-import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
