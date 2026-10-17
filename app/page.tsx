@@ -1,4 +1,6 @@
 import About from "@/sections/About";
+import Contact from "@/sections/contact";
+
 import Hero from "@/sections/Hero";
 import Navbar from "@/sections/Navbar";
 import { Services } from "@/sections/Services";
@@ -13,6 +15,7 @@ export default function Home() {
         <About />
         <Services />
         <Skills />
+        <Contact />
       </main>
     </div>
   );
