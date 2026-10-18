@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Contact() {
@@ -9,6 +10,15 @@ export default function Contact() {
             Let&apos;s talk on your{" "}
             <span className="text-secondary">great project</span> together.
           </h2>
+          <div className="flex p-4 rounded-lg flex-row gap-2">
+            <Image alt="gmail" src={"/public/gmail-removebg-preview.png"} />
+            <div className="flex flex-row items-center justify-between">
+              <div className="flex flex-col gap-1">
+                <p className="font-semi-bold text-grey text-md">EMAIL</p>
+                <p className="text-sm text-grey">riungebrian@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <form
