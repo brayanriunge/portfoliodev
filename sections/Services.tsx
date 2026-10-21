@@ -50,7 +50,7 @@ export function Services() {
           write code that drives business results.
         </p>
       </div>
-      <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center px-8 py-8 gap-6">
+      <div className="grid grid-rows-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center px-8 py-8 gap-6">
         {services.map((service) => (
           <GlareCard className="flex flex-col  p-6  bg-card" key={service.id}>
             <h1 className="text-3xl text-grey mt-12">{service.heading}</h1>
