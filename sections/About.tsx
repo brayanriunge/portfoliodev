@@ -47,6 +47,7 @@ export default function About() {
               src={"/profile.avif"}
               height={600}
               width={600}
+              loading="eager"
               alt="profile"
               className="rounded-lg aspect-3/2 w-full "
             />

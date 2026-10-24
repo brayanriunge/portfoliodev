@@ -51,7 +51,7 @@ export default function Contact() {
   };
   return (
     <>
-      <section className="bg-background  px-8 py-8" id="contact">
+      <section className="bg-primary  px-8 py-8" id="contact">
         <div className="space-y-4 flex mt-10 px-2 mb-4">
           <p className="text-accent px-4 font-[sora] italic">Contact</p>
         </div>
@@ -135,7 +135,7 @@ export default function Contact() {
             target="_blank"
             action="https://formsubmit.co/el/confirm/2dd9c4243ec33486c234487d5df75c2f"
             method="POST"
-            className="w-full p-8 border-2 border-accent mt-4 rounded-2xl"
+            className="w-full p-8 border-2 border-accent mt-4 bg-background rounded-2xl"
           >
             <div className="flex flex-col py-4 gap-4 w-full">
               <div className=" flex items-center justify-center  ">
@@ -177,7 +177,7 @@ export default function Contact() {
           </form>
         </div>
       </section>
-      <section className="bg-primary  px-8 py-8">
+      <section className="bg-background  px-8 py-8">
         <div className=" flex flex-col items-center justify-center">
           <div className="grid md:grid-cols-7 gap-2 lg:grid-cols-7 mt-4">
             {navItems.map((navItem) => (
