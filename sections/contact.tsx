@@ -52,7 +52,9 @@ export default function Contact() {
   return (
     <>
       <section className="bg-background  px-8 py-8" id="contact">
-        <p className="text-accent px-4 font-[sora] italic mt-6">My Skills</p>
+        <div className="space-y-4 flex mt-10 px-2 mb-4">
+          <p className="text-accent px-4 font-[sora] italic">Contact</p>
+        </div>
         <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center gap-6">
           <div className="flex flex-col  items-cente p-2 justify-center">
             <h2 className="font-bold text-5xl font-[sora] text-grey">

@@ -117,7 +117,9 @@ const styles = [
 export default function Skills() {
   return (
     <div className="px-8 py-8 bg-primary" id="skills">
-      <p className="text-accent px-4 font-[sora] italic">My Skills</p>
+      <div className="space-y-4 flex mt-10 px-2 mb-4 ">
+        <p className="text-accent px-4 font-[sora] italic">My Skills</p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-col-2 lg:grid-cols-2 gap-6 mt-4">
         <div className=" p-2 bg-background rounded-xl border-2 border-accent">
           <p className="text-accent font-bold font-[Sora] flex items-center p-6 text-xl justify-center">
@@ -162,7 +164,7 @@ export default function Skills() {
         </div>
 
         <div className=" p-2 bg-background rounded-xl border-2 border-accent">
-          <p className="text-accent font-bold font-[Sora] flex items-center p-6 text-xl justify-center">
+          <p className="text-accent font-bold font-[Sora] flex items-center p-6 text-xl  justify-center">
             Styling
           </p>
 
