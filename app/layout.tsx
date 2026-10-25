@@ -13,21 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://brian-riunge-portfolio.vercel.app/"),
   title: "Brian's Portfolio",
   description: "Brian's portfolio",
-  openGraph: {
-    title: "Brian's Portfolio",
-    description: "Welcome to my portfolio",
-    images: [
-      {
-        url: "/profile.png", // Reference file stored in the /public folder
-        width: 1200,
-        height: 630,
-        alt: "Website preview image",
-      },
-    ],
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
