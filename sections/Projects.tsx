@@ -53,7 +53,7 @@ const projects = [
     src: "https://mentalhealthdev.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     lin: "/healthcare.png",
     describe:
       "The purpose of a healthcare appointment scheduling application is to streamline and digitize the connection between patients and medical facilities, allowing individuals to conveniently book visits online while administrators manage provider availability, through a centralized dashboard.",
@@ -65,6 +65,18 @@ const projects = [
       <SiAppwrite color="#FD366E" size={30} key="five" />,
     ],
     src: "https://healthcaredev.vercel.app/",
+  },
+  {
+    id: 4,
+    lin: "/jambo.png",
+    describe:
+      "The purpose of a bar and restaurant website is to serve as a digital storefront that drives foot traffic by providing essential information to potential diners.",
+    tools: [
+      <SiNextdotjs color="#000000" size={30} key="first" />,
+      <SiTailwindcss color="#00BCFF" size={30} key="second" />,
+      <SiTypescript color="#007ACC" size={30} key="third" />,
+    ],
+    src: "https://jambolounge.vercel.app/",
   },
 ];
 
