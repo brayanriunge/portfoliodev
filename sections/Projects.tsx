@@ -67,7 +67,7 @@ const projects = [
     src: "https://healthcaredev.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     lin: "/jambo.png",
     describe:
       "The purpose of a bar and restaurant website is to serve as a digital storefront that drives foot traffic by providing essential information to potential diners.",
@@ -103,9 +103,9 @@ export default function Projects() {
             <p className="text-grey text-lg">{project.describe}</p>
 
             <div className="flex flex-row gap-3 text-grey">
-              {project.tools.map((tool) => (
-                <div className="bg-forecolor p-2 rounded-md" key={tool}>
-                  {tool}
+              {project.tools.map((toolName, index) => (
+                <div className="bg-forecolor p-2 rounded-md" key={index}>
+                  {toolName}
                 </div>
               ))}
             </div>
