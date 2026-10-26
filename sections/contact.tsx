@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { motion } from "motion/react";
 import React, { useEffect, useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
@@ -54,7 +55,18 @@ export default function Contact() {
         <div className="space-y-4 flex mt-10 px-2 mb-4">
           <p className="text-accent px-4 font-[sora] italic">Contact</p>
         </div>
-        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center gap-6">
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center gap-6"
+        >
           <div className="flex flex-col  items-cente p-2 justify-center">
             <h2 className="font-bold text-5xl font-[sora] text-grey">
               Let&apos;s talk on your{" "}
@@ -130,9 +142,17 @@ export default function Contact() {
             </div>
           </div>
 
-          <form
+          <motion.form
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
             target="_blank"
-            action="https://formsubmit.co/el/confirm/2dd9c4243ec33486c234487d5df75c2f"
+            action="https://formsubmit.co/riungebrian@gmail.com"
             method="POST"
             className="w-full p-8 border-2 border-accent mt-4 bg-background rounded-2xl"
           >
@@ -167,14 +187,18 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <button className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey transition-all duration-300 mt-4 animate-slide-in-left cursor-pointer">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey transition-all duration-300 mt-4 animate-slide-in-left cursor-pointer"
+              >
                 <div className="flex gap-4 items-center ">
                   <IoSend size={24} /> Send Now
                 </div>
-              </button>
+              </motion.button>
             </div>
-          </form>
-        </div>
+          </motion.form>
+        </motion.div>
       </section>
       <section className="bg-background  px-8 py-8">
         <div className=" flex flex-col items-center justify-center">

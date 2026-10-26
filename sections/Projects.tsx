@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion, Variants } from "motion/react";
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -80,15 +82,42 @@ const projects = [
   },
 ];
 
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      ease: "easeOut",
+      duration: 0.4,
+    },
+  },
+};
 export default function Projects() {
   return (
     <section className="bg-background  px-8 py-8" id="projects">
-      <div className="space-y-4 flex mt-10 px-2 mb-4">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="space-y-4 flex mt-10 px-2 mb-4"
+      >
         <p className="text-accent px-4 font-[sora] italic">Project</p>
-      </div>
+      </motion.div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-        {projects.map((project) => (
-          <div
+        {projects.map((project, index) => (
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: "some" }}
+            transition={{ delay: (index % 3) * 0.05 }}
             className="p-6 flex flex-col gap-10 rounded-lg border-accent border-2"
             key={project.id}
           >
@@ -111,15 +140,19 @@ export default function Projects() {
             </div>
             <a href={project.src} target="-blank">
               <div className="flex items-center justify-center mb-4">
-                <button className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey transition-all duration-300 mt-4 animate-slide-in-left cursor-pointer">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey transition-all duration-300 mt-4 animate-slide-in-left cursor-pointer"
+                >
                   <div className="flex gap-4 items-center ">
                     View live Site
                     <FaArrowRightLong size={20} />
                   </div>
-                </button>
+                </motion.button>
               </div>
             </a>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
