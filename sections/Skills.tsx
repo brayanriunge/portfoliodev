@@ -131,7 +131,17 @@ export default function Skills() {
       >
         <p className="text-accent px-4 font-[sora] italic">My Skills</p>
       </motion.div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-col-2 lg:grid-cols-2 gap-6 mt-4">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-col-2 lg:grid-cols-2 gap-6 mt-4"
+      >
         <div className=" p-2 bg-background rounded-xl border-2 border-accent">
           <p className="text-accent font-bold font-[Sora] flex items-center p-6 text-xl justify-center">
             Frontend Development
@@ -194,7 +204,7 @@ export default function Skills() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

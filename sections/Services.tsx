@@ -2,6 +2,7 @@
 import { GlareCard } from "@/components/ui/glare-card";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const services = [
   {
@@ -33,10 +34,30 @@ const services = [
 export function Services() {
   return (
     <section className="bg-background  px-8 py-8" id="services">
-      <div className="space-y-4 flex mt-10 px-2 mb-4">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="space-y-4 flex mt-10 px-2 mb-4"
+      >
         <p className="text-accent px-4 font-[sora] italic">Services</p>
-      </div>
-      <div className="space-y-4  ">
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="space-y-4  "
+      >
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-accent font-[sora]">
           What I Build
         </h2>
@@ -49,7 +70,7 @@ export function Services() {
           product (MVP) built from scratch or system performance optimized, I
           write code that drives business results.
         </p>
-      </div>
+      </motion.div>
       <div className="grid grid-rows-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center px-8 py-8 gap-6">
         {services.map((service) => (
           <GlareCard className="flex flex-col  p-6  bg-card" key={service.id}>

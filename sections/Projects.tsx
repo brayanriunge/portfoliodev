@@ -90,7 +90,8 @@ const cardVariants: Variants = {
     transition: {
       type: "spring",
       ease: "easeOut",
-      duration: 0.4,
+      duration: 0.5,
+      staggerChildren: 0.5,
     },
   },
 };
@@ -117,7 +118,7 @@ export default function Projects() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: "some" }}
-            transition={{ delay: (index % 3) * 0.05 }}
+            transition={{ delay: (index % 3) * 0.7 }}
             className="p-6 flex flex-col gap-10 rounded-lg border-accent border-2"
             key={project.id}
           >

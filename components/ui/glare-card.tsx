@@ -1,6 +1,17 @@
 "use client";
 import { cn } from "@/lib/utlils";
 import { useRef } from "react";
+import { motion } from "motion/react";
+
+const container = {
+  hidden: { opacity: 0 }, // Give it a starting state
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // Staggers the children by 0.2s
+    },
+  },
+};
 
 export const GlareCard = ({
   children,
@@ -67,7 +78,15 @@ export const GlareCard = ({
     }
   };
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
       style={containerStyle}
       className="relative isolate [aspect-ratio:17/21] w-93 transition-transform delay-[var(--delay)] duration-[var(--duration)] ease-[var(--easing)] will-change-transform [contain:layout_style] [perspective:600px]"
       ref={refElement}
@@ -128,6 +147,6 @@ export const GlareCard = ({
           style={{ ...backgroundStyle }}
         /> */}
       </div>
-    </div>
+    </motion.div>
   );
 };
