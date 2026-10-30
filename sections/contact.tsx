@@ -60,7 +60,7 @@ export default function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
@@ -142,22 +142,24 @@ export default function Contact() {
             </div>
           </div>
 
-          <motion.form
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
+          <form
             target="_blank"
             action="https://formsubmit.co/riungebrian@gmail.com"
             method="POST"
             className="w-full p-8 border-2 border-accent mt-4 bg-background rounded-2xl"
           >
             <div className="flex flex-col py-4 gap-4 w-full">
-              <div className=" flex items-center justify-center  ">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className=" flex items-center justify-center  "
+              >
                 <input
                   type="text"
                   name="name"
@@ -165,8 +167,18 @@ export default function Contact() {
                   placeholder="Full Name"
                   required
                 />
-              </div>
-              <div className="w-full flex items-center justify-center">
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className="w-full flex items-center justify-center"
+              >
                 <input
                   type="email"
                   name="email"
@@ -174,9 +186,19 @@ export default function Contact() {
                   placeholder="Email Address"
                   required
                 />
-              </div>
+              </motion.div>
 
-              <div className="w-full flex items-center justify-center">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.2 }}
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className="w-full flex items-center justify-center"
+              >
                 <textarea
                   placeholder="Your Message"
                   className="bg-forecolor  w-5/6 text-white placeholder-white px-4 py-2  border rounded "
@@ -184,7 +206,7 @@ export default function Contact() {
                   rows={10}
                   required
                 ></textarea>
-              </div>
+              </motion.div>
             </div>
             <div className="flex items-center justify-center">
               <motion.button
@@ -197,7 +219,7 @@ export default function Contact() {
                 </div>
               </motion.button>
             </div>
-          </motion.form>
+          </form>
         </motion.div>
       </section>
       <section className="bg-background  px-8 py-8">

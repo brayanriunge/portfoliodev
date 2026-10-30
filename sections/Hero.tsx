@@ -60,7 +60,11 @@ export default function Hero() {
               performant web applications that users love.
             </motion.p>
             <Link href={"#contact"}>
-              <button className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey  mt-4  cursor-pointer">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-accent hover:bg-accentBackground px-4 py-4 rounded-2xl text-background text-lg font-bold hover:text-grey  mt-4  cursor-pointer"
+              >
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -74,7 +78,7 @@ export default function Hero() {
                 >
                   Contact Me <FaArrowRightLong size={20} />
                 </motion.div>
-              </button>
+              </motion.button>
             </Link>
           </div>
         </div>
