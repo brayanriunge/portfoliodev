@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "motion/react";
 import { FaBootstrap, FaNodeJs, FaReact } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoHtml5 } from "react-icons/io";
@@ -117,18 +118,28 @@ const styles = [
 export default function Skills() {
   return (
     <div className="px-8 py-8 bg-primary" id="skills">
-      <div className="space-y-4 flex mt-10 px-2 mb-4 ">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="space-y-4 flex mt-10 px-2 mb-4 "
+      >
         <p className="text-accent px-4 font-[sora] italic">My Skills</p>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-col-2 lg:grid-cols-2 gap-6 mt-4">
         <div className=" p-2 bg-background rounded-xl border-2 border-accent">
           <p className="text-accent font-bold font-[Sora] flex items-center p-6 text-xl justify-center">
             Frontend Development
           </p>
 
-          <div className="grid grid-cols-2 mb-4">
+          <motion.div className="grid grid-cols-2 mb-4">
             {frontend.map((item) => (
-              <div
+              <motion.div
                 key={item.id}
                 className="flex items-center gap-4 justify-center p-3"
               >
@@ -137,9 +148,9 @@ export default function Skills() {
                   <p className="font-bold ">{item.text1}</p>
                   <p>{item.text2}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         <div className=" p-2 bg-background rounded-xl border-2 border-accent">

@@ -88,7 +88,7 @@ const cardVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "tween",
+      type: "spring",
       ease: "easeOut",
       duration: 0.4,
     },
