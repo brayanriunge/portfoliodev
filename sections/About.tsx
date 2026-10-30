@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { motion } from "motion/react";
 
 import { SiCssdesignawards } from "react-icons/si";
 import { TiTick } from "react-icons/ti";
@@ -8,21 +9,54 @@ export default function About() {
   return (
     <>
       <section id="about" className="px-8 py-8 bg-primary">
-        <div className="space-y-4 flex px-2 mt-10">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="space-y-4 flex px-2 mt-10"
+        >
           <p className="text-accent px-4 font-[sora] italic">About Me</p>
-        </div>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl animate-fade-in transition-all duration-300 transition-delay-100 font-bold leading-tight text-grey px-2">
-          <p>
-            {" "}
-            Building the future,
-            <span className="text-accent font-[sora]">
-              one component at a time.
-            </span>
-          </p>
-        </h2>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: 50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="div"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl animate-fade-in transition-all duration-300 transition-delay-100 font-bold leading-tight text-grey px-2">
+            <p>
+              {" "}
+              Building the future,
+              <span className="text-accent font-[sora]">
+                one component at a time.
+              </span>
+            </p>
+          </h2>
+        </motion.div>
+
         <div className="flex flex-col mt-6 md:flex-col lg:flex-row items-center justify-center gap-6 mx-auto px-6">
-          <div className="flex space-y-4  flex-row md:flex-col lg:flex-col  text-grey text-xl  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
-            <div className="text-secondaryText">
+          <motion.div className="flex space-y-4  flex-row md:flex-col lg:flex-col  text-grey text-xl  max-w-lg animate-slide-in-left transition-all duration-300 transiton-delay-200 gap-2">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="text-secondaryText"
+            >
               <p className="">
                 I&apos;m a passionate software engineer with experience in
                 crafting digital products that make a difference. My journey
@@ -41,8 +75,8 @@ export default function About() {
                 technologies, contributing to open-source projects, or sharing
                 knowledge with the developer community.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className="space-y-4 w-full items-center justify-center flex ">
             <Image
               src={"/profile.avif"}
