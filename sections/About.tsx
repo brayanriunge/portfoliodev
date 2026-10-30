@@ -101,7 +101,17 @@ export default function About() {
               Why Collaborate With Me?
             </h2>
             <div className="flex flex-col md:flex-row lg:flex-row justify-between gap-4  mt-8">
-              <div className="flex flex-col gap-2 justify-between">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: -50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col gap-2 justify-between"
+              >
                 <div className="flex row gap-4 flex-row items-center">
                   <div className="rounded-full p-1 border-2 border-accent">
                     <TiTick color="#4ade80" size={12} />
@@ -118,8 +128,18 @@ export default function About() {
                   approach bridges rigorous engineering practices with proactive
                   monitoring to minimize downtime and secure data integrity.
                 </p>
-              </div>
-              <div className="flex flex-col gap-2 justify-between">
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col gap-2 justify-between"
+              >
                 <div className="flex row gap-4 flex-row items-center">
                   <SiCssdesignawards color="#4ade80" size={20} />
 
@@ -136,7 +156,7 @@ export default function About() {
                   hood directly translates to a seamless, accessible, and
                   high-performance interface for the user.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
